@@ -1,7 +1,17 @@
 -- SQL-команды для создания таблиц
+CREATE TABLE orders
+(
+	order_id varchar(100) PRIMARY KEY UNIQUE,
+	customer_id varchar(100),
+	employee_id int,
+	order_date date,
+	ship_city varchar(100)
+
+)
+
 CREATE TABLE customers
 (
-	customer_id varchar(100) PRIMARY KEY,
+	customer_id varchar(100) PRIMARY KEY UNIQUE REFERENCES orders(order_id),
 	company_name varchar(100) NOT NULL,
 
 	contact_name varchar(100) NOT NULL
@@ -17,12 +27,4 @@ CREATE TABLE employess
 	notes text
 
 )
-CREATE TABLE orders
-(
-	order_id int PRIMARY KEY,
-	customer_id int,
-	employee_id varchar(100),
-	order_date date,
-	ship_city varchar(100)
 
-)
