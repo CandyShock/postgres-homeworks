@@ -32,7 +32,7 @@ def main():
 
         for item in data_1[1:]:
              cursor.execute(
-                 f"INSERT INTO employess (first_name, last_name, title, birth_date, notes) VALUES('{item[0]}', '{item[1]}', '{item[2]}', '{item[3]}', '{item[4]}')")
+                 f"INSERT INTO employees (first_name, last_name, title, birthday, notes) VALUES('{item[0]}', '{item[1]}', '{item[2]}', '{item[3]}', '{item[4]}')")
 
         for item in data_2[1:]:
             cursor.execute(f"INSERT INTO orders (order_id, customer_id, employee_id, order_date, ship_city) VALUES('{item[0]}', '{item[1]}', '{item[2]}', '{item[3]}', '{item[4]}')")
