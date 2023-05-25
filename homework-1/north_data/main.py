@@ -27,7 +27,7 @@ def main():
 
     with conn:
         cursor = conn.cursor()
-        for i in data_[0:]:
+        for i in data_:
             cursor.execute(
                 f'INSERT INTO customers(customer_id, company_name, contact_name) VALUES (%s, %s, %s)',
                 (i["customer_id"], i["company_name"], i["contact_name"]))
