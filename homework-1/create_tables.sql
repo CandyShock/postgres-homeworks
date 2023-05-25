@@ -5,7 +5,7 @@ create table employees
     first_name varchar(50) not null,
     last_name  varchar(50) not null,
     title      varchar(50) not null,
-    birthday   date        not null,
+    birth_date   date        not null,
     notes      text
 );
 create table customers (
